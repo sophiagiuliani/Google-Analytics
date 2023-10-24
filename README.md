@@ -8,7 +8,7 @@
 
  ![attribution report ](https://github.com/sophiagiuliani/Google-Analytics/assets/126698969/1c1e5f30-c338-430a-8946-2d12642f47ad)
 
- ###Challenges:
+ ### Challenges:
  
 1. One of the problems of the attribution report is the data when analysing number sessions by session origin. The store uses a tool that allows users to create a landing page with links to their social media profiles. The URL of this tool is what appears as "session's origin", instead of the social media itself. Not knowing exactly from which platform the user arrived from can affect the real numbers. 
 
