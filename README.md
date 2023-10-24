@@ -15,6 +15,10 @@
 To solve this problem, I will propose the store to use UTM parameters (tags added at the end of a URL) to track the performance of this tool links across different social media platforms. Once the tags are added, it is possible to see the results in the campaigns section of the google analytics reports. 
 
 2. Considering tha Google Analytics provides several attribution models, it is important to choose the one that fits better the business. Last click, first click or linear could be used, depending on the focus. If the focus is on channels that are driving the most immediate conversions, last click would be the option; if the focus is on the channels that are driving initial awareness and interest, then first click would be best option; and if the focus is in all touchpoints of the user journey, then linear would fits better the goal. I personally believe that linear would be the best option because it can help to understand which channels are driving initial awareness and interest, which channels are driving consideration and evaluation, and which channels are driving conversion and loyalty. This model can be changed as the marketing campaigns expand in reach. 
+
+## Engagement report
+
+Metrics and Dimensions of the events and conversions reports were edited to fit better the business characteristics and needs. Because the target audience was not configured yet, the conversions by the target audience graph will not who relevant data. 
  
 
    This project will be updated weekly. 
