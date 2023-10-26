@@ -8,6 +8,10 @@ Metrics and dimensions of the attribution report were edited to show relevant da
 
  ![attribution report ](https://github.com/sophiagiuliani/Google-Analytics/assets/126698969/1c1e5f30-c338-430a-8946-2d12642f47ad)
 
+ I created a dashboard on Looker Studio because it is possible to connect the data in Google Analytics directly with Looker. The purpose of this dashboard is to show the session attribution through time; compare the number of sessions that are attributed to each origin and campaign; and compare the bounce rate, engagement rate and revenue attributed to each campaign and origin. I also included the possibility of choosing the data range and the city of the session. The idea is to show, in general, where the users are coming from before arriving at the website, so the store can have a better idea of the performance of each campaign and social media. This is the dashboard: 
+
+![Captura de Tela (133)](https://github.com/sophiagiuliani/gif/assets/126698969/b772ea53-69f5-49a0-996d-5a4626a41e4b)
+
  ### Challenges:
  
 1. One of the problems of the attribution report is the data when analysing number sessions by session origin. The store uses a tool that allows users to create a landing page with links to their social media profiles. The URL of this tool is what appears as "session's origin", instead of the social media itself. Not knowing exactly from which platform the user arrived from can affect the real numbers. 
