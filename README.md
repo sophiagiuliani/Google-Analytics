@@ -20,7 +20,13 @@ To solve this problem, I will propose the store to use UTM parameters (tags adde
 
 2. In a similar sense, some traffic sources such as instagram are not unified, which means that "l.instagram" and "instagram" are shown as different traffic sources. The problem is that not unifying them can lead to wrong conclusions, since "instagram" can be in the second place in number of sessions, but would be the first if the sessions from "l.instagram" were combined.
 
-In Universal Analytics it was possible to unify the traffic sources by creating a filter in the admin section. However, it is not possible to do that in Google Analytics 4 and I could not find anything online that explains how to unify them. I posted on Google Analytics forums and Discord groups, and I am waiting to see if anyone can help. In the mean time, I decided to export the data to BigQuery and will use SQL to unify the sources and then connect it to Looker Studio for the visualization. 
+In Universal Analytics it was possible to unify the traffic sources by creating a filter in the admin section. However, it is not possible to do that in Google Analytics 4 and I could not find anything online that explains how to unify them. To solve this issue I decided to export the data to BigQuery and will use SQL to unify the sources and then connect it to Looker Studio for the visualization. Update: The data from GA4 takes up to a day to be uploaded at BigQuery. While I waited for it, I explored other options and realized that it was possible to use the Looker Studio calculated fields to group all instagram sources into one. In order to do that I simply used the function REGEXP_REPLACE. Here is how it looks like:
+
+```
+REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(
+Session Origin,'l.instagram.com','instagram.com'),'lm.facebook.com','facebook.com'
+),'m.facebook.com','facebook.com'),'l.facebook.com','facebook.com')
+```
 
 3. Considering tha Google Analytics provides several attribution models, it is important to choose the one that fits better the business. Last click, first click or linear could be used, depending on the focus. If the focus is on channels that are driving the most immediate conversions, last click would be the option; if the focus is on the channels that are driving initial awareness and interest, then first click would be best option; and if the focus is in all touchpoints of the user journey, then linear would fits better the goal. I personally believe that linear would be the best option because it can help to understand which channels are driving initial awareness and interest, which channels are driving consideration and evaluation, and which channels are driving conversion and loyalty. This model can be changed as the marketing campaigns expand in reach. 
 
